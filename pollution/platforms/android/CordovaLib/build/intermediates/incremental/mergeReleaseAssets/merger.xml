@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\ing2014-2017\3eme_ing\S1\angularJs\project\pollution\platforms\android\CordovaLib\assets"/><source path="D:\ing2014-2017\3eme_ing\S1\angularJs\project\pollution\platforms\android\CordovaLib\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="D:\ing2014-2017\3eme_ing\S1\angularJs\project\pollution\platforms\android\CordovaLib\src\release\assets"/></dataSet></merger>

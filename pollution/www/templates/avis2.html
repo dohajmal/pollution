@@ -1,0 +1,33 @@
+<ion-view view-title="AVIS" class="bg-app" class="pane">
+	<ion-content>
+
+
+		<div class="content-avis padding">
+			<div class="donner-note">
+				<center><h5>Ajouter votre avie</h5></center>
+
+
+				<ul class="list">
+
+					<li ng-repeat="i in ['Etat' , 'Prix','Satisfaction','Comportement']" class="item">
+						<div class="row padding-null">
+							<div class="col padd-left-null">
+								{{i}}
+							</div>
+							<ionic-ratings ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+						</div>
+					</li>
+				</ul>
+			</div><!--donner-note  -->
+			<div class="ajout-avis">
+				<h5>Commentaire</h5>
+				<label class="item item-input">
+					<input type="text" ng-model="data.message" />
+				</label>
+				<a class="button button-full button-energized button-energized-2" ng-click="valider()">ENVOYER</a>
+			</div><!-- ajout-avis -->
+		</div><!--content-avis-->
+
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view  view-title="Login" class="bg-app"><!--hide-back-button="true"-->
+	<!--<ion-nav-bar class="bar-stable bar-dark mynavbar">
+		<ion-nav-back-button class="button-clear go-back">
+		</ion-nav-back-button>
+	</ion-nav-bar>-->
+	<ion-content>
+
+		<form name="login"  ng-controller="logincontroller">
+			<div class="login-wrap">
+				<div class="login-html">
+					<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" style="margin-left: 20%;">Connexion</label>
+					<input id="tab-2" type="radio" hidden="true" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+					<div class="login-form" style="margin-top: 12%;">
+						<div class="sign-in-htm">
+			<div class="group">
+			<label class="label">Login</label>
+			<input type="text" class="input" ng-model="data.login">
+		</div>
+			<div class="group">
+			<label class="label">Password</label>
+			<input type="text" class="input" ng-model="data.password">
+		<div style="margin-top: 14%;">
+			<div class="group" style="margin-bottom: -28px;padding: -2px -11px;border: none;padding: 7px 0px;border-radius: 25px;">
+			<input type="button" align="bottom" class="button" ng-click="sendData();"ng-disabled="login.$invalid" value="Connexion" style="    padding: 0px 3px; border-bottom: 1px solid #1161ee;">
+			<br/>
+
+			</input>
+		</div>
+			<div class="group" style="margin-bottom: -10px;padding: -2px -11px;border: none;padding: 7px 0px;border-radius: 25px;">
+			<a href="#/app/inscription" class="button" style="    padding: 0px 3px; border-bottom: 1px solid #1161ee;" >Inscription</a>
+		</div>
+		</div>
+			</div>
+							</div></div></div></div>
+
+		</form>
+
+  </ion-content>
+</ion-view>
+
+

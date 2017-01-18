@@ -1,0 +1,35 @@
+<ion-view hide-back-button="true" view-title="Map">
+    <ion-content>
+
+        <div class="map" id="map" ng-model="map">
+
+            <!--map-->
+            <div class="pos-btn-abon">
+                <div class="padding">
+
+                    <a class="button button-balanced button-full " href="#/app/camera">
+                        Ajouter
+                    </a>
+
+                    <button  class="button button-balanced button-full" ng-click="refresh();">
+                        Mise a jour <br/>
+
+                    </button>
+                </div>
+            </div>
+
+            <div class="call-msg" style="margin-top:120%;">
+                <div class="row">
+                    <div class="col padd-left-null">
+                        <a href="tel:{{tel}}" class="ion-android-call style-icon"></a>
+                    </div><!--col-->
+                    <div class="col padd-right-null">
+                        {{data.distance}}
+                    </div><!--col-->
+                </div><!--row-->
+
+            </div><!--"call-msg-->
+        </div>
+
+    </ion-content>
+</ion-view>

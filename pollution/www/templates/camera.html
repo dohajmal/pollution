@@ -1,0 +1,47 @@
+<ion-view hide-back-button="true" view-title="Camera" >
+    <ion-content>
+        <form name="camera"  ng-controller="cameracontroller">
+            <div class="login-wrap">
+                <div class="login-html" style="    padding: 24px 124px 63px 91px;">
+                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" style="margin-left: -17%;margin-bottom: 12%;">Rempli</label>
+                    <input id="tab-2" type="radio" hidden="true" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+                    <div class="login-form" style="margin-top: 10%;    margin-left: -13%;">
+                        <div class="sign-in-htm">
+                            <div class="group">
+<div class="btnAdd">
+
+        <div class="row responsive-sm" style="    margin-left: -48px;">
+            <div class="col col-50">
+                <img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[1]" ng-click="showConfirm(1)" style="margin-left: 39%;width: 129%;margin-top: -24%;"/>
+                <img  ng-show="data.ftLoad[1]" class=" item-thumbnail" ng-model="image" ng-src="{{data.picData[1]}}"  width="30%" ng-click="showConfirm(1)"/>
+
+                    <div class="group" style="margin-top: -11%;margin-bottom:-1px;padd;margin-left: 42%;argin-left: 50%;margin-left: 52%;width: 169%;height: 15%;border: none;padding: 7px 0px;border-radius: 25px;width: 102%;">
+
+                    <button type="button" class="button" ng-click="showConfirm(1)" style="padding: 0px 3px; border-bottom: 1px solid #1161ee;">
+                    photo1
+                    <ion-spinner ng-hide="showing[1]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+                </button>
+                        </div>
+               <input type="hidden"  ng-model="data.image">
+                <label class="label" style="margin-left: 53%;">  Decription:</label>
+                <textarea rows="4" cols="50" name="desc" ng-model="description" style="margin-left: 22%;width: 169%;height: 12%;" class="input ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched"></textarea>
+                <label class="label" style="margin-left: 53%;margin-top: 4%;"> Latitude:</label> <input type="text"class="input ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ng-model="latitude" style="margin-left: 24%;width: 162%;">
+                <label class="label" style="margin-left: 53%;margin-top: 4%;">Longitude:</label> <input type="text" class="input ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ng-model="longitude" style="margin-left: 24%;width: 162%;">
+
+                <div style="margin-top: 14%;">
+                    <div class="group" style="margin-bottom: -10px;padding: -2px -11px;border: none;padding: 7px 0px;border-radius: 25px;">
+
+                    <button type="button" align="bottom" class="button" ng-click="cameraData();"ng-disabled="camera.$invalid" style="padding: 0px 3px; border-bottom: 1px solid #1161ee;margin-left: 56%;margin-top: -10%;">
+                        ajouter <br/>
+
+                    </button>
+            </div>
+            </div>
+        </div>
+
+</div>
+
+</div></div></div></div></div></div>
+        </form>
+    </ion-content>
+</ion-view>

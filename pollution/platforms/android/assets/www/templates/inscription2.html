@@ -1,0 +1,178 @@
+<ion-view  view-title="CREER UN COMPTE" class="bg-app"><!--hide-back-button="true"-->
+	<!--<ion-nav-bar class="bar-stable bar-dark mynavbar">
+		<ion-nav-back-button class="button-clear go-back">
+		</ion-nav-back-button>
+	</ion-nav-bar>-->
+	<ion-content>
+
+		<div class="content-inscri-2 padding">
+			<form  enctype="multipart/form-data"   name="myForm">
+
+				<div class="addFile">
+					<div class="row responsive-sm">
+						<div class="col">
+							<img src="img/image-profil.png" ng-hide="data.ftLoad[0]" class="avatar-upload" />
+							<img  ng-show="data.ftLoad[0]" ng-src="{{data.picData[0]}}" class="avatar-upload" />
+						</div>
+						<div class="col">
+							<button type="button" class="button button-upload" ng-click="showConfirm(0)">
+								ajouter votre photo <br/>
+								<ion-spinner ng-hide="showing[0]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="btnAdd">
+					<center>
+						<div class="row responsive-sm">
+							<div class="col col-50">
+								<img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[1]" ng-click="showConfirm(1)"/>
+								<img  ng-show="data.ftLoad[1]" class=" item-thumbnail" ng-src="{{data.picData[1]}}" width="30%" ng-click="showConfirm(1)"/>
+								<button type="button" class="button button-upload btnn" ng-click="showConfirm(1)">
+									photo1
+									<ion-spinner ng-hide="showing[1]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+								</button>
+							</div>
+							<div class="col col-50">
+								<img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[2]" ng-click="showConfirm(2)"/>
+								<img  ng-show="data.ftLoad[2]" class=" item-thumbnail" ng-src="{{data.picData[2]}}" width="30%" ng-click="showConfirm(2)"/>
+								<button type="button" class="button button-upload btnn" ng-click="showConfirm(2)">
+									photo2
+									<ion-spinner ng-hide="showing[2]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+								</button>
+							</div>
+						</div>
+						<div class="row responsive-sm">
+							<div class="col col-50">
+								<img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[3]" ng-click="showConfirm(3)"/>
+								<img  ng-show="data.ftLoad[3]" class=" item-thumbnail" ng-src="{{data.picData[3]}}" width="30%" ng-click="showConfirm(3)"/>
+								<button type="button" class="button button-upload btnn" ng-click="showConfirm(3)">
+									photo3
+									<ion-spinner ng-hide="showing[3]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+								</button>
+							</div>
+							<div class="col col-50">
+								<img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[4]" ng-click="showConfirm(4)"/>
+								<img  ng-show="data.ftLoad[4]" class=" item-thumbnail" ng-src="{{data.picData[4]}}" width="30%" ng-click="showConfirm(4)"/>
+								<button type="button" class="button button-upload btnn" ng-click="showConfirm(4)">
+									photo4
+									<ion-spinner ng-hide="showing[4]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+								</button>
+							</div>
+							<div class="col col-50">
+								<img src="img/imgg.png" class=" item-thumbnail" ng-hide="data.ftLoad[5]" ng-click="showConfirm(5)"/>
+								<img  ng-show="data.ftLoad[5]" class=" item-thumbnail" ng-src="{{data.picData[5]}}" width="30%" ng-click="showConfirm(5)"/>
+								<button type="button" class="button button-upload btnn" ng-click="showConfirm(5)">
+									photo5
+									<ion-spinner ng-hide="showing[5]" class="crescent"></ion-spinner><span class="button-text"></span></a>
+								</button>
+							</div>
+						</div>
+					</center>
+				</div>
+				<label class="item item-input item-stacked-label item-border marg-top-ins">
+					<span class="input-label input-label-2">userName</span>
+					<input type="text" class="style-input" ng-model="data.username">
+				</label>
+				<!--Code-->
+
+				<div class="row padding-null">
+					<div class="col col-50 padd-left-null">
+						<label class="item item-input item-stacked-label item-border marg-top-ins">
+							<span class="input-label input-label-2">Domicile</span>
+							<input type="text" class="style-input" ng-model="data.adrpersonelle">
+						</label>
+					</div>
+					<div class="col col-50 padd-right-null">
+						<label class="item item-input item-stacked-label item-border marg-top-ins">
+							<span class="input-label input-label-2">Bureau</span>
+							<input type="text" class="style-input" name="nom" ng-model="data.adresPro">
+						</label>
+					</div>
+				</div>
+				<!--row-->
+
+
+				<label class="item item-input item-stacked-label ">
+					<select name="service_id" class="item-select-2" ng-model="data.master" ng-change="showSelectValue(data.master)" required>
+						<option ng-selected= "true"   value="visa">Visa  </option>
+						<option     value="MasterCard">MasterCard  </option>
+						<option     value="Paypal">Paypal  </option>
+
+					</select>
+
+				</label>
+				<!--col-->
+
+
+				<!--Adresse personnel-->
+				<div ng-show="data.master!='Paypal'">
+					<label class="item item-input item-stacked-label item-border marg-top-ins">
+						<span class="span1 input-label input-label-2">num Carte</span>
+
+						<input type="tel" class="style-input  input-block-level" ng-model="data.numcrt" minlength="16" maxlength="16"/>
+						<!-- payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.data.numCart.$card.type"-->
+					</label>
+					<!--Adresse profesionel-->
+
+					<div class="row padding-null">
+						<div class="col col-50 padd-left-null">
+							<label class="item item-input item-stacked-label item-border marg-top-ins">
+								<span class="input-label input-label-2">CVV</span>
+								<input type="tel"  minlength="3" maxlength="3" class="style-input input-block-level"    ng-model="data.ccv" />
+								<!--payments-validate="cvc" payments-format="cvc" payments-type-model="type"-->
+							</label>
+						</div>
+						<!--Carte bancaire-->
+						<div class="col col-50 padd-right-null">
+							<label class="item item-input item-stacked-label item-border marg-top-ins">
+								<span class="input-label input-label-2" >MMAA</span>
+								<input minlength="4" maxlength="4" type="tel" class="style-input input-block-level" ng-model="data.mmaa"  />
+
+							</label>
+						</div>
+						<!--CCV-->
+					</div>
+				</div>
+				<div ng-show="data.master=='Paypal'">
+					<label class="item item-input item-stacked-label item-border marg-top-ins">
+						<span class="span1 input-label input-label-2">email PayPal</span>
+
+						<input type="email" class="style-input  input-block-level" ng-model="data.numcrt" />
+						<!-- payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.data.numCart.$card.type"-->
+					</label>
+					<!--Adresse profesionel-->
+
+					<div class="row padding-null">
+						<div class="col col-50 padd-left-null">
+							<label class="item item-input item-stacked-label item-border marg-top-ins">
+								<span class="input-label input-label-2">Mot de passe</span>
+								<input type="password"  minlength="3" maxlength="3" class="style-input input-block-level"    ng-model="data.ccv" />
+								<!--payments-validate="cvc" payments-format="cvc" payments-type-model="type"-->
+							</label>
+						</div>
+
+					</div>
+				</div>
+
+				<!--row-->
+				<!-- <div class="padding">
+                 <p ng-show="myForm.$invalid">Carte non valide</p>
+                 </div>ng-disabled="data.disable"-->
+
+				<!--...-->
+				<a class="button button-block button-energized button-energized-2"    type="submit" ng-click="send()">ENVOYER </a>
+			</form>
+
+
+
+		</div>
+		<!--content-inscri-1-->
+
+
+
+
+	</ion-content>
+</ion-view>
+
+
