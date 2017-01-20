@@ -1,0 +1,12 @@
+<ion-view view-title="camera">
+  <ion-header-bar class="bar-assertive">
+    <h1 class="title">Photos</h1>
+  </ion-header-bar>
+  <ion-content ng-controller="CameraCtrl">
+    <div class="list card"><div class="item item-image"><img src="{{pictureURl}}" height="100"></div> </div>
+    <div class="padding">
+      <button ng-click="takePicture()" class="button button-black button-calm">Take Picture</button>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h2> list news </h2>
+  <input type="checkbox"
+         ng-model="chk" align="left"/>
+  <input type="text" ng-model="name" placeholder="search"/>
+
+  <input type="checkbox"
+         ng-model="chk2" align="right"/>
+
+  <ul>
+    <li ng-repeat="nw in news | filter:name " ng-if="filterExpression(nw.publishedAt,chk2)">
+      <div>
+        <img ng-src="{{nw.urlToImage}}" width="20%" />
+        <h3>{{nw.title}}</h3><br/>
+        <p>{{nw.description}}</p><br/>
+        <p ng-hide="chk">{{nw.publishedAt}}</p><br/>
+      </div>
+    </li>
+  </ul>
+
+  <a href="#/home"> Back</a>
+</div>

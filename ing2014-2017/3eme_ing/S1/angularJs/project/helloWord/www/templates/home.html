@@ -1,0 +1,12 @@
+<div class="container">
+  <h2> Welcome </h2>
+  <p>{{message}}</p>
+  <select ng-model="selected">
+    <option value="bloomberg">bloomberg</option>
+    <option value="bild">bild</option>
+    <option value="business-insider">business-insider</option>
+  </select>
+  <!--<a href="#/news?id={{selected}}">valider</a>-->
+  <a href="#/news/{{selected}}">valider</a>
+  <button ng-click="goToNews(selected)">Valider</button>
+</div>
